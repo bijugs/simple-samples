@@ -31,8 +31,8 @@ def cluster_state(pathVariable):
                    '\nThe cluster looks healthy. ', 200, {'Content-Type': 'text/plain; charset=utf-8'}
         else:
             data, stat = zk.get('/hbase/master')
-            start = data.find('bach-')
-            end = data.find('.bloomberg')
+            start = data.find('start-')
+            end = data.find('.end')
             hmaster = data[start:end]
             data = zk.get_children('/hbase/rs')
             rs = ""

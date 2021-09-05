@@ -27,7 +27,7 @@ public class ExtensionLoader {
                                      String.class, String.class).getName();
         System.out.println("clazz "+clazz+" "+m+" "+clazz.hashCode());
         clazz.getDeclaredMethod("loginUserFromKeytab",
-                               String.class, String.class).invoke(null,"bach_tester@ADDEV.BLOOMBERG.COM","/home/bnair10/bach_tester.keytab");
+                               String.class, String.class).invoke(null,"tester@KRB.COM","/home/user0/tester.keytab");
         ClassLoader loader1 = new URLClassLoader(new URL[] { new URL("file:///tmp/hbase-test.jar") });
         //Class clazz = Class.forName(classpath, true, loader);
         Class clazz1 = loader1.loadClass(classname);
@@ -35,7 +35,7 @@ public class ExtensionLoader {
                                      String.class, String.class).getName();
         System.out.println("clazz1 "+clazz1+" "+m1+" "+clazz1.hashCode());
         clazz1.getDeclaredMethod("loginUserFromKeytab",
-                               String.class, String.class).invoke(null,"bach_tester@ADDEV.BLOOMBERG.COM","/home/bnair10/bach_tester.keytab");
+                               String.class, String.class).invoke(null,"tester@KRB.COM","/home/user0/tester.keytab");
         Thread.sleep(600000);
         return;
       } catch (ClassNotFoundException e) {
