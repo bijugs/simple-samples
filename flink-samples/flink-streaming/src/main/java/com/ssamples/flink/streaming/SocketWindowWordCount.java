@@ -75,6 +75,8 @@ public class SocketWindowWordCount {
 		DataStream<String> text = env.socketTextStream(hostname, port, "\n", 60L);
 
 		env.enableCheckpointing(5000);
+		
+		text.assignTimestampsAndWatermarks(timestampAndWatermarkAssigner)
 
 		// parse the data, group it, window it, and aggregate the counts
 		DataStream<WordWithCount> windowCounts = text
