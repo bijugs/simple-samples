@@ -14,3 +14,4 @@ snap
 .cache/code-server
 .local/share/code-server
 !.docker/config.json
+.ssh/
