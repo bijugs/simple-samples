@@ -30,6 +30,8 @@ module "server" {
   tags = var.tags
 }
 
+/*
 module "s3" {
   source       = "./modules/s3"
 }
+*/

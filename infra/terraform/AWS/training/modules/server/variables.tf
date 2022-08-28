@@ -11,5 +11,5 @@ variable key_name {}
 variable private_key {}
 variable num_servers {
   type    = number
-  default = 2
+  default = 1
 }
